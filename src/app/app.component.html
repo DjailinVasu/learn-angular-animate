@@ -1,5 +1,10 @@
 <div class="container">
-    <div class="wrap d-flex align-items-center justify-content-center">
-          <div class="box"></div>
+    <div class="wrap d-flex align-items-center justify-content-center flex-column">
+      <button class="btn btn-info" (click)="animate()">Animate</button>
+          <hr/>
+          <div
+          class="box"
+          [@box]="boxState"
+          ></div>
     </div>
 </div>
