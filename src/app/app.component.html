@@ -2,7 +2,10 @@
   <div
     class="wrap d-flex align-items-center justify-content-center flex-column"
   >
-    <button class="btn btn-info" (click)="animate()">Animate</button>
+    <div class="btn-group">
+      <button class="btn btn-info" (click)="animate()">Animate</button>
+      <button class="btn btn-info" (click)="boxState = 'special'">Special</button>
+    </div>
     <hr />
     <div class="box" [@box]="boxState">
         <span> {{ boxState | uppercase }} </span>
