@@ -7,4 +7,12 @@
   width: 150px;
   height: 150px;
   border: 1px solid #888888;
+  color: #fff;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-weight: 900;
+  }
 }
