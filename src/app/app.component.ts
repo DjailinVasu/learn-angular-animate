@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate, group } from '@angular/animations';
+import { trigger, state, style, transition, animate, group, query } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -22,11 +22,18 @@ import { trigger, state, style, transition, animate, group } from '@angular/anim
       transition('start => end', animate(300)),
       transition('end => start', animate('800ms ease-in-out')),
       transition('special <=> *', [
-        style({background: 'green'}),
-        animate('1s', style({
-          background: 'pink'
-        })),
-        animate(750)
+        group([
+          query('span', animate(450, style({
+            fontSize: '28px',
+            color: 'red'
+          }))),
+          style({background: 'green'}),
+          animate('1s', style({
+            background: 'pink'
+          })),
+          animate(750)
+        ])
+
       ]),
       //void => *
       transition(':enter', [
