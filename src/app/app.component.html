@@ -5,10 +5,13 @@
     <div class="btn-group">
       <button class="btn btn-info" (click)="animate()">Animate</button>
       <button class="btn btn-info" (click)="boxState = 'special'">Special</button>
+      <button class="btn btn-info" (click)="visible = !visible">Visible</button>
     </div>
     <hr />
-    <div class="box" [@box]="boxState">
+    <div class="box-container">
+      <div class="box" [@box]="boxState" *ngIf="visible">
         <span> {{ boxState | uppercase }} </span>
+      </div>
     </div>
   </div>
 </div>
