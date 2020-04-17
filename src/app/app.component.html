@@ -9,7 +9,7 @@
     </div>
     <hr />
     <div class="box-container">
-      <div class="box" [@box]="boxState" *ngIf="visible">
+      <div class="box" [@box]="boxState" *ngIf="visible" (@box.start)="animationStart($event)" (@box.done)="animationDone($event)">
         <span> {{ boxState | uppercase }} </span>
       </div>
     </div>

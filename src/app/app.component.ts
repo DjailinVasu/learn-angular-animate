@@ -44,7 +44,7 @@ import { trigger, state, style, transition, animate, group, query, keyframes } f
           style({background: 'orange', offset: 0.2}),
           style({background: 'yellow', offset: 0.4}),
           style({background: 'green', offset: 0.7}),
-          style({background: 'blue', offset: 1}),
+          style({background: 'blue',  offset: 1}),
         ]))
       ]),
       // * => void
@@ -71,5 +71,14 @@ export class AppComponent {
 
   animate() {
     this.boxState = this.boxState === 'end' ? 'start' : 'end'
+  }
+
+  animationStart(event: AnimationEvent) {
+    console.log('animationStart', event);
+
+  }
+
+  animationDone(event: AnimationEvent) {
+    console.log('animationDone', event);
   }
 }
