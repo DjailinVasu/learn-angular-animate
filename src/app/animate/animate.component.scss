@@ -1,0 +1,14 @@
+.rect {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.rect-container {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

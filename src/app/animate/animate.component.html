@@ -1,0 +1,6 @@
+<button class="btn btn-info mb-5" (click)="visible = !visible">Visible is {{visible}}</button>
+
+<div class="rect-container">
+  <div class="rect" [@bounce] *ngIf="visible"></div>
+</div>
+

@@ -2,7 +2,7 @@
   <div
     class="wrap d-flex align-items-center justify-content-center flex-column"
   >
-    <div class="btn-group">
+    <!-- <div class="btn-group">
       <button class="btn btn-info" (click)="animate()">Animate</button>
       <button class="btn btn-info" (click)="boxState = 'special'">Special</button>
       <button class="btn btn-info" (click)="visible = !visible">Visible</button>
@@ -12,6 +12,7 @@
       <div class="box" [@box]="boxState" *ngIf="visible" (@box.start)="animationStart($event)" (@box.done)="animationDone($event)">
         <span> {{ boxState | uppercase }} </span>
       </div>
-    </div>
+    </div> -->
+    <app-animate></app-animate>
   </div>
 </div>
